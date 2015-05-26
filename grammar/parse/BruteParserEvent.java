@@ -91,7 +91,26 @@ public class BruteParserEvent extends EventObject {
 		return type == REJECT;
 	}
 
-	/**
+    /**
+     * Returns true if this event indicates the grammar is ambiguous.
+     *
+     * @return if this event is of type ambiguous
+     */
+    public boolean isAmbiguous() {
+        return type == AMBIGUOUS;
+    }
+
+    /**
+     * Returns true if this event indicates the grammar is not ambiguous.
+     *
+     * @return if this event is of type nonAmbiguous
+     */
+    public boolean isNonAmbiguous() {
+        return type == NONAMBIGUOUS;
+    }
+
+
+    /**
 	 * Returns the type of event this is.
 	 */
 	public int getType() {
@@ -102,5 +121,5 @@ public class BruteParserEvent extends EventObject {
 	private int type;
 
 	/** The type of events. */
-	public static final int START = 0, PAUSE = 1, ACCEPT = 2, REJECT = 3;
+	public static final int START = 0, PAUSE = 1, ACCEPT = 2, REJECT = 3, AMBIGUOUS = 5, NONAMBIGUOUS = 6;
 }

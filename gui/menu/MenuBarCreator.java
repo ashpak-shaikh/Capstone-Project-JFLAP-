@@ -21,20 +21,19 @@
 package gui.menu;
 
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.io.Serializable;
-
-import grammar.Grammar;
-import grammar.TuringChecker;
-import gui.environment.Environment;
-import gui.environment.AutomatonEnvironment;
-import gui.environment.EnvironmentFrame;
-import gui.environment.Universe;
-import gui.action.*;
 import automata.Automaton;
 import automata.graph.LayoutAlgorithmFactory;
 import automata.graph.layout.VertexMover;
+import grammar.TuringChecker;
+import gui.action.*;
+import gui.environment.AutomatonEnvironment;
+import gui.environment.Environment;
+import gui.environment.EnvironmentFrame;
+import gui.environment.Universe;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.io.Serializable;
 
 /**
  * The <CODE>MenuBarCreator</CODE> is a creator of the menu bars for the FLAP
@@ -257,6 +256,10 @@ public class MenuBarCreator {
 		if (MultipleCYKParseAction.isApplicable(object))
 			addItem(menu, new MultipleCYKParseAction(
 					(gui.environment.GrammarEnvironment) environment));
+        if (BruteParseAction.isApplicable(object))
+            addItem(menu, new AmbigousAction(
+                    (gui.environment.GrammarEnvironment) environment));
+
 //		if (TuringBruteParseAction.isApplicable(object))
 //			addItem(menu, new TuringBruteParseAction(
 //					(gui.environment.GrammarEnvironment) environment));

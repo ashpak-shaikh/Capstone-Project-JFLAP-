@@ -54,14 +54,27 @@ public class UnrestrictedTreePanel extends TreePanel {
 		super(new DefaultTreeModel(new DefaultMutableTreeNode("")));
 		this.brutePane = pane;
 	}
-	
+
+
 	public UnrestrictedTreePanel(BruteParsePane pane, HashMap <String, String> map) {
 		super(new DefaultTreeModel(new DefaultMutableTreeNode("")));
 		this.brutePane = pane;
 		this.myVariableMap=map;
 	}
 
-	/**
+    public UnrestrictedTreePanel(AmbigousPane pane) {
+
+        super(new DefaultTreeModel(new DefaultMutableTreeNode("")));
+        this.brutePane = pane;
+    }
+
+    public UnrestrictedTreePanel(AmbiguousPane1 pane) {
+
+        super(new DefaultTreeModel(new DefaultMutableTreeNode("")));
+        this.brutePane = pane;
+    }
+
+    /**
 	 * Returns the string representation of the tops and bottoms.
 	 */
 	public String getTB() {
@@ -598,7 +611,7 @@ public class UnrestrictedTreePanel extends TreePanel {
 
 
 	/** The brute parse pane. */
-	protected BruteParsePane brutePane;
+	protected ParsePane brutePane;
 
 	/** The parse nodes. */
 	protected ParseNode[] solutionParseNodes;

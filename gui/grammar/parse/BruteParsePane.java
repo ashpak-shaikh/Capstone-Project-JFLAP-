@@ -21,15 +21,18 @@
 package gui.grammar.parse;
 
 import grammar.Grammar;
-import grammar.parse.*;
+import grammar.parse.BruteParser;
+import grammar.parse.BruteParserEvent;
+import grammar.parse.BruteParserListener;
 import gui.environment.GrammarEnvironment;
 import gui.sim.multiple.InputTableModel;
-import gui.tree.*;
-import java.awt.*;
-import java.awt.event.*;
+import gui.tree.SelectNodeDrawer;
 
 import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * This is a brute force parse pane.
@@ -216,6 +219,7 @@ public class BruteParsePane extends ParsePane {
 						}
 						TreeNode node = e.getParser().getAnswer();
 						do {
+                            System.out.println(node);
 							node = node.getParent();
 						} while (node != null);
 						statusDisplay

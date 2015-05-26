@@ -150,6 +150,9 @@ public abstract class BruteParser {
 		return answer;
 	}
 
+
+    public synchronized  ParseNode getAnswer1() { return null; }
+
 	/**
 	 * Returns a list of possible one step parses for a given string. The first
 	 * entry is always the identity.
@@ -408,4 +411,6 @@ public abstract class BruteParser {
 	 * The "smaller" set, those symbols that may possibly reduce to nothing.
 	 */
 	protected Set smaller;
+
+
 }
