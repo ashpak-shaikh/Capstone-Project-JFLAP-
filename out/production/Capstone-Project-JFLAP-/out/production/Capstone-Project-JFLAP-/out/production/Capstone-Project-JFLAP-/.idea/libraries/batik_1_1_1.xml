@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="batik-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/production/JFLAP-7.0_With_Source/batik-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

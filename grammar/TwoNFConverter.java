@@ -24,21 +24,23 @@ import java.util.*;
 
 
 /**
- * Converts grammars to Chomsky normal form.
+ * Converts grammars to Binaru normal form.
  * 
- * @author Thomas Finley
+ * @author Ashpak Shaikh
  */
 
 public class TwoNFConverter {
-    /**
-     * Instantiates a new chomsky normal converter.
-     *
-     * @param grammar the grammar to convert
-     *
-     */
 
     private static List<String> variables;
 
+    /**
+     *
+     * This method converts the grammar to binray normal form.
+     *
+     * @param grammar
+     *
+     * @return
+     */
     public static Production[] convert(Grammar grammar) {
 
         variables = new ArrayList<String>(Arrays.asList(grammar.getVariables()));
@@ -57,6 +59,13 @@ public class TwoNFConverter {
         return newproductions.toArray(new Production[newproductions.size()]);
     }
 
+    /**
+     *
+     * This method gives the replacement for the given production.
+     *
+     * @param production
+     * @return
+     */
     private static Production[] getReplacements(Production production) {
 
         List<Production> newProds = new ArrayList<Production>();
@@ -80,6 +89,12 @@ public class TwoNFConverter {
         return newProds.toArray(new Production[newProds.size()]);
     }
 
+    /**
+     *
+     * This method returns the new variable used for 2-NF conversion.
+     *
+     * @return
+     */
     private static String createNewVariable() {
         for (char c = 'A'; c <= 'Z'; c++) {
             String var = String.valueOf(c);
@@ -91,6 +106,5 @@ public class TwoNFConverter {
         }
         return null;
     }
-
 
 }

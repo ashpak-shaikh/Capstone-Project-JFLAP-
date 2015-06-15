@@ -38,14 +38,14 @@ import java.util.Set;
 import javax.swing.JOptionPane;
 
 /**
- * This is an action to transform a grammar.
+ * This is an action to transform a grammar to 2 NF form.
  *
- * @author Thomas Finley
+ * @author Ashpak Shaikh
  */
 
 public class Grammar2NFTransformAction extends GrammarAction {
     /**
-     * Instantiates a new <CODE>GrammarTransformAction</CODE>.
+     * Instantiates a new <CODE>Grammar2NFTransformAction</CODE>.
      *
      * @param environment
      *            the grammar environment

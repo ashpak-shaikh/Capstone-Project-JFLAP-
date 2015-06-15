@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Capstone-Project-JFLAP-.iml" filepath="$PROJECT_DIR$/Capstone-Project-JFLAP-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JFLAP-7.0_With_Source.iml" filepath="$PROJECT_DIR$/JFLAP-7.0_With_Source.iml" />
+    </modules>
+  </component>
+</project>

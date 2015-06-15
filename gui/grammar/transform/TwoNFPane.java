@@ -36,14 +36,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
- * The pane for converting a grammar to Chomsky normal form.
+ * The pane for converting a grammar to Binary normal form.
  *
  * @author Thomas Finley
  */
 
 public class TwoNFPane extends JPanel {
     /**
-     * Instantiates a Chomsky pane.
+     * Instantiates a 2NF pane.
      *
      * @param environment
      *            the environment that this pane will become a part of
